@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="804.0" style="-fx-background-color: #6A25Fd; -fx-border-color: #c2731f;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.User1Controller">
+   <children>
+      <Text layoutX="9.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User 1" wrappingWidth="202.050048828125">
+         <font>
+            <Font name="Bodoni MT Bold" size="36.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="plainTxt" layoutX="213.0" layoutY="97.0" prefHeight="72.0" prefWidth="378.0" promptText="Enter plain text to encrypt." />
+      <TextArea fx:id="encryptedTxt" layoutX="211.0" layoutY="273.0" prefHeight="72.0" prefWidth="388.0" promptText="Encrypted text is shown here." />
+      <Text fill="#1e1e1d" layoutX="34.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Plain Text:" wrappingWidth="110.050048828125">
+         <font>
+            <Font name="Bodoni MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#1e1e1d" layoutX="34.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Encrypted Text:" wrappingWidth="158.85009765625">
+         <font>
+            <Font name="Bodoni MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="sendBtn" layoutX="542.0" layoutY="500.0" mnemonicParsing="false" onAction="#send" style="-fx-background-color: crimson;" text="SEND" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="encBtn" layoutX="509.0" layoutY="169.0" mnemonicParsing="false" onAction="#encrypt" style="-fx-background-color: crimson;" text="ENCRYPT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextArea fx:id="dsTxt" layoutX="218.0" layoutY="428.0" prefHeight="72.0" prefWidth="380.0" promptText="Digital signature will be shown here." />
+      <Text fill="#1e1e1d" layoutX="34.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Digital Signature:" wrappingWidth="182.65008544921875">
+         <font>
+            <Font name="Bodoni MT Bold" size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="decBtn" layoutX="517.0" layoutY="345.0" mnemonicParsing="false" onAction="#decrypt" style="-fx-background-color: crimson;" text="DECRYPT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="clr" layoutX="37.0" layoutY="611.0" mnemonicParsing="false" onAction="#clearTxt" prefHeight="39.0" prefWidth="104.0" style="-fx-background-color: crimson;" text="CLEAT TEXT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="verify" layoutX="218.0" layoutY="572.0" prefHeight="39.0" prefWidth="378.0" promptText="Verified?" style="-fx-background-color: crimson;" text="Verifying DS: ">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
+      <Label fx:id="serpentK" alignment="TOP_LEFT" layoutX="450.0" layoutY="14.0" prefHeight="43.0" prefWidth="351.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+   </children>
+</Pane>
